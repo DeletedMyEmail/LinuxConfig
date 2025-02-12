@@ -54,10 +54,10 @@ done
 echo -e "${GREEN}Bash commands added ${NC}"
 
 # git config
-cp gitconfig_prv /home/joshua/Programming/Prv/.gitconfig
-cp gitconfig_uni /home/joshua/Programming/Uni/.gitconfig
-cp gitconfig_work /home/joshua/Programming/Work/.gitconfig
-cp gitconfig_global /home/joshua/.gitconfig
+cp gitconfigs/gitconfig_prv /home/joshua/Programming/Prv/.gitconfig
+cp gitconfigs/gitconfig_uni /home/joshua/Programming/Uni/.gitconfig
+cp gitconfigs/gitconfig_work /home/joshua/Programming/Work/.gitconfig
+cp gitconfigs/gitconfig_global /home/joshua/.gitconfig
 echo -e "${GREEN}Git configured ${NC}"
 
 # reload
