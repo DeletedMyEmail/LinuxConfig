@@ -1,6 +1,9 @@
 [init]
 	defaultBranch = main
 
+[alias]
+	ac = commit -am
+
 [includeIf "gitdir:~/Programming/Work/"]
 	path = ~/Programming/Work/.gitconfig
 

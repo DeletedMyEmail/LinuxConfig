@@ -35,3 +35,6 @@ cp gitconfig_prv /home/joshua/Programming/Prv/.gitconfig
 cp gitconfig_uni /home/joshua/Programming/Uni/.gitconfig
 cp gitconfig_work /home/joshua/Programming/Work/.gitconfig
 cp gitconfig_global /home/joshua/.gitconfig
+
+# reload
+. ~/.bashrc
