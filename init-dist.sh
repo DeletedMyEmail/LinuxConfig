@@ -1,6 +1,6 @@
 # sys update
 sudo apt update
-yes | sudp apt upgrade
+yes | sudo apt upgrade
 
 
 # install tools
