@@ -5,9 +5,10 @@ parse_branch() {
         git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
 
+NC='\033[0m'
 COLOR="\[\033[33m\]"
 
-export PS1="${COLOR}[ \033[1m\W ]\$(parse_branch) ❱❱❱ "
+export PS1="${COLOR}[ \033[1m\W ]\$(parse_branch) ❱❱❱ ${NC}"
 
 . "$HOME/.atuin/bin/env"
 
