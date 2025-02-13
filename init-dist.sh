@@ -26,6 +26,7 @@ echo
 # flatpak
 yes | sudo nala install flatpak
 yes | flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+flatpak install org.freedesktop.Platform
 # brave
 yes | flatpak install flathub com.brave.Browser
 echo -e "${GREEN}Brave installed ${NC}"
