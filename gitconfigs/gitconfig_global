@@ -1,0 +1,15 @@
+[init]
+	defaultBranch = main
+
+[alias]
+	ac = commit -am
+
+[includeIf "gitdir:~/Programming/Work/"]
+	path = ~/Programming/Work/.gitconfig
+
+[includeIf "gitdir:~/Programming/Uni/"]
+        path = ~/Programming/Uni/.gitconfig
+
+[includeIf "gitdir:~/Programming/Prv/"]
+        path = ~/Programming/Prv/.gitconfig
+
