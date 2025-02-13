@@ -1,5 +1,6 @@
 #alias neofetch='neofetch --source /home/joshua/Pictures/neofetch_ascii.txt'
 #neofetch
+alias prog='cd ~/Programming/Prv'
 
 parse_branch() {
         git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
