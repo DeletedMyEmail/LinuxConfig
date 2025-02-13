@@ -39,25 +39,25 @@ echo
 cp bashrc ~/.bashrc
 
 # make dirs
-mkdir /home/joshua/bin
-mkdir -p /home/joshua/Programming/Prv
-mkdir -p /home/joshua/Programming/Uni
-mkdir -p /home/joshua/Programming/Work
+mkdir ~/bin
+mkdir -p ~/Programming/Prv
+mkdir -p ~/Programming/Uni
+mkdir -p ~/Programming/Work
 
 
 # add scripts to bin
 for path in scripts/*.sh; do
         filename=$(basename $path)
-        cp "scripts/${filename}" "/home/joshua/bin/${filename%.*}"
-        chmod +x "/home/joshua/bin/${filename%.*}"
+        cp "scripts/${filename}" "~/bin/${filename%.*}"
+        chmod +x "~/bin/${filename%.*}"
 done
 echo -e "${GREEN}Bash commands added ${NC}"
 
 # git config
-cp gitconfigs/gitconfig_prv /home/joshua/Programming/Prv/.gitconfig
-cp gitconfigs/gitconfig_uni /home/joshua/Programming/Uni/.gitconfig
-cp gitconfigs/gitconfig_work /home/joshua/Programming/Work/.gitconfig
-cp gitconfigs/gitconfig_global /home/joshua/.gitconfig
+cp gitconfigs/gitconfig_prv ~/Programming/Prv/.gitconfig
+cp gitconfigs/gitconfig_uni ~/Programming/Uni/.gitconfig
+cp gitconfigs/gitconfig_work ~/Programming/Work/.gitconfig
+cp gitconfigs/gitconfig_global ~/.gitconfig
 echo -e "${GREEN}Git configured ${NC}"
 
 # reload
