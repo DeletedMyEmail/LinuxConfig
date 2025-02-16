@@ -1,3 +1,0 @@
-#!/bin/bash
-sudo nala update
-yes | sudo nala upgrade
