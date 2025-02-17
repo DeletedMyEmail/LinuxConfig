@@ -1,127 +1,176 @@
-@import "mocha.css"; 
+/*
+ *                                                                    
+ *     ,---.   ,--.           ,--.           ,-----.                  
+ *    '   .-',-'  '-.,--. ,--.|  | ,---.     |  |) /_  ,--,--.,--.--. 
+ *    `.  `-.'-.  .-' \  '  / |  || .-. :    |  .-.  \' ,-.  ||  .--' 
+ *    .-'    | |  |    \   '  |  |\   --.    |  '--' /\ '-'  ||  |    
+ *    `-----'  `--'  .-'  /   `--' `----'    `------'  `--`--'`--'    
+ *                   `---'                                            
+ *
+ *
+ *       , _ ,        RESUME: Minimal style config to have basic info
+ *      ( o o )              
+ *     /'` ' `'\
+ *     |'''''''|      AUTHOR:  Andr3xDev
+ *     |\\'''//|      URL:  https://github.com/Andr3xDev/Dotfiles-MainArch 
+ *        """
+ */
 
-* {
-    font-family: "MesloLGS Nerd Font Mono Bold";
+
+
+/*--------------------------------------------------------------------------------
+ *    Colors 
+ *-------------------------------------------------------------------------------*/
+
+@define-color background            #282828;
+@define-color hard_background       #1B1B1B;
+@define-color second_background     #45403D;
+@define-color foreground            #EBDBB2;
+@define-color selection_foreground  #D8A657;
+@define-color selection_background  #3c3836;
+@define-color color_blue            #7DAEA3;
+@define-color color_green           #A9B665;
+@define-color color_yellow          #D8A657;
+@define-color color_red        	    #EA6962;
+@define-color color_purple          #d3869B;
+@define-color color_aqua            #89B482;
+@define-color color_grey            #7C6F64;
+@define-color color_white           #A89984;
+
+
+
+/*--------------------------------------------------------------------------------
+ *    General 
+ *-------------------------------------------------------------------------------*/
+
+*{
+    font-family: FontAwesome, Jetbrains Mono Nert;
     font-size: 16px;
-    min-height: 0;
-    font-weight: bold;
 }
 
 window#waybar {
-    background: transparent;
-    background-color: @crust;
-    color: @overlay0;
-    transition-property: background-color;
-    transition-duration: 0.1s;
-    border-bottom: 1px solid @overlay1;
+    background-color: @background;
+    color: @foreground;
+    border-top: 3px solid;
+    border-bottom: 3px solid;
+    border-color: @hard_background;
 }
 
-#window {
-    margin: 8px;
-    padding-left: 8;
-    padding-right: 8;
+
+
+/*--------------------------------------------------------------------------------
+ *    Sections 
+ *-------------------------------------------------------------------------------*/
+
+.modules-right {
+    border-top: 3px solid;
+    border-right: 3px solid;
+    border-bottom: 3px solid;
+    border-color: @hard_background;
+
 }
 
-button {
-    box-shadow: inset 0 -3px transparent;
-    border: none;
-    border-radius: 0;
+.modules-center {
+    border-top: 3px solid;
+    border-bottom: 3px solid;
+    border-color: @hard_background;
 }
 
-button:hover {
-    background: inherit;
-    color: @mauve;
-    border-top: 2px solid @mauve;
+.modules-left {
+    background-color: @background;
+    border-top: 3px solid;
+    border-left: 3px solid;
+    border-bottom: 3px solid;
+    border-color: @hard_background;
 }
 
+
+
+/*--------------------------------------------------------------------------------
+ *    Left Modules 
+ *-------------------------------------------------------------------------------*/
+
+#workspaces {
+    background-color: @background;
+    color: @foreground;
+    padding-left: 1em;
+}
 #workspaces button {
-    padding: 0 4px;
+    color: @foreground;
+    padding: 0 6px;
 }
-
-#workspaces button.focused {
-    background-color: rgba(0, 0, 0, 0.3);
-    color: @rosewater;
-    border-top: 2px solid @rosewater;
+#workspaces button:hover {
+    background-color: @color_aqua;
+    color: #000000;
 }
-
 #workspaces button.active {
-    background-color: rgba(0, 0, 0, 0.3);
-    color: @mauve;
-    border-top: 2px solid @mauve;
+    color: @color_red;
 }
-
-#workspaces button.urgent {
-    background-color: #eb4d4b;
-}
-
-#pulseaudio,
-#clock,
-#battery,
-#cpu,
-#memory,
-#disk,
-#temperature,
-#backlight,
-#wireplumber,
-#tray,
-#network,
-#mode,
-#scratchpad {
-  margin-top: 2px;
-  margin-bottom: 2px;
-  margin-left: 4px;
-  margin-right: 4px;
-  padding-left: 4px;
-  padding-right: 4px;
+#workspaces button.active:hover {
+    background-color: @color_aqua;
+    color: #000000;
 }
 
 #clock {
-    color: @maroon;
-    border-bottom: 2px solid @maroon;
+    background-color: @background;
+    padding-right: 1em; 
+    padding-left: 1em;
+    border-right: 3px;
+    border-right-style: solid;
+    border-right-color: @color_yellow;
 }
 
-#clock.date {
-    color: @mauve;
-    border-bottom: 2px solid @mauve;
+
+
+/*--------------------------------------------------------------------------------
+ *    Right Modules 
+ *-------------------------------------------------------------------------------*/
+
+#battery {
+    color: @foreground;
+    padding-left: 0.5em;
+    padding-right: 1.5em;
+}
+#battery.charging, #battery.plugged {
+    color: @foreground;
 }
 
-#pulseaudio {
-    color: @blue;
-    border-bottom: 2px solid @blue;
+#memory {
+    padding-left: 1em;
+    padding-right: 0.5em;
+}
+
+#cpu {
+    padding-right: 0.5em;
+    padding-left: 1em;
+    border-left: 3px;
+    border-left-style: solid;
+    border-left-color: @color_green;
 }
 
 #network {
-    color: @yellow;
-    border-bottom: 2px solid @yellow;
+    padding-right: 2em;
+    padding-left: 1em;
 }
 
-#idle_inhibitor {
-    margin-right: 12px;
-    color: #7cb342;
+#network.disconnected {
 }
 
-#idle_inhibitor.activated {
-    color: @red;
+#bluetooth{
+    padding-right: 1em;
+    padding-left: 1em;
 }
 
-#battery {
-    color: @green;
-    border-bottom: 2px solid @green;
+#wireplumber{
+    background-color: @background;
+    padding-right: 1em;
+    padding-left: 1.5em;
 }
 
-/* If workspaces is the leftmost module, omit left margin */
-.modules-left>widget:first-child>#workspaces {
-    margin-left: 0;
-}
-
-/* If workspaces is the rightmost module, omit right margin */
-.modules-right>widget:last-child>#workspaces {
-    margin-right: 0;
-}
-
-#custom-vpn {
-    color: @lavender;
-    border-radius: 15px;
-    padding-left: 6px;
-    padding-right: 6px;
+#custom-spotify {
+    padding-right: 1.5em;
+    padding-left: 1em;
+    border-right: 3px;
+    border-right-style: solid;
+    border-right-color: @color_blue;
 }

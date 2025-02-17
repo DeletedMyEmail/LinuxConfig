@@ -6,10 +6,13 @@ sudo pacman -Syyu
 # yay
 sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
 # install ui stuff
-yay -S hyprland hyprpaper hyprlock wofi nwg-look waybar
+yay -S hyprland hyprpaper hyprlock wofi nwg-look waybar ttf-font-awesome
 # inistall other tools
 yay -S kitty bitwarden yubioath-desktop snapd code blueman pavucontrol timeshift
 curl --proto '=https' --tlsv1.2 -LsSf https://setup.atuin.sh | sh # atuin
+systemctl enable bluetooth
+
+mkdir -p ~/Pictures/Wallpapers/
 
 # add scripts to bin
 mkdir ~/bin
