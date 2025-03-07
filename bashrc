@@ -24,3 +24,6 @@ PS1="${COLOR}[ \033[1m\W ]\$(parse_branch) ❱❱❱ ${NC}"
 eval "$(atuin init bash)"
 
 #neofetch
+
+export PATH="$HOME/bin:$PATH"
+
